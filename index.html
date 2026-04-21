@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOCHIATO | Italian Flavor, Anytime, Anywhere</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#E52421',    
+                            green: '#008C45',  
+                            dark: '#0a0a0a',   
+                            darker: '#000000',
+                            light: '#fdfdfd',
+                            gray: '#a1a1aa'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Scroll Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.9s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Custom pattern background */
+        .bg-pattern {
+            background-image: radial-gradient(rgba(229, 36, 33, 0.08) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        /* Glassmorphism */
+        .glass {
+            background: rgba(10, 10, 10, 0.7);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        /* Gradient Text */
+        .text-gradient {
+            background: linear-gradient(to right, #ffffff, #a1a1aa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-brand-red text-white font-sans antialiased overflow-x-hidden selection:bg-white selection:text-brand-red">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="block w-40 transform hover:scale-105 transition-transform">
+                <img src="MOCHIATO LOGO PNG (FONT AFACAD).png" alt="Mochiato Logo" class="w-full h-auto drop-shadow-lg">
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-medium text-white/80">
+                <a href="#about" class="hover:text-white transition-colors">About</a>
+                <a href="#anatomy" class="hover:text-white transition-colors">Anatomy</a>
+                <a href="#nutrition" class="hover:text-white transition-colors">Nutrition</a>
+            </div>
+            <a href="#shop" class="bg-white hover:bg-gray-100 text-brand-red px-6 py-2.5 rounded-full text-sm uppercase tracking-wider font-bold transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)]">
+                Shop Now
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden bg-brand-red bg-pattern">
+        <div class="absolute top-1/4 left-0 w-[500px] h-[500px] bg-white/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10 w-full">
+            <div class="space-y-8 reveal mt-10 lg:mt-0">
+                <div class="inline-flex items-center gap-3 border border-white/30 bg-white/10 px-4 py-1.5 rounded-full text-xs font-semibold tracking-[0.2em] uppercase text-white">
+                    <i data-lucide="award" class="w-4 h-4"></i>
+                    By Relife Nutrition
+                </div>
+                <h1 class="text-5xl md:text-7xl font-serif leading-[1.1] font-bold">
+                    Italian Flavor,<br>
+                    <span class="text-white/90 italic">Anytime, Anywhere.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-white/80 font-light leading-relaxed max-w-xl">
+                    A revolutionary gourmet snacking experience. Complete mini-meals featuring Michelin-starred recipes, 32g of protein, and authentic Italian ingredients in a portable format.
+                </p>
+                
+                <!-- Quick Stats -->
+                <div class="flex gap-6 py-2 border-y border-white/20 max-w-md">
+                    <div>
+                        <span class="block text-2xl font-bold text-white">32g</span>
+                        <span class="text-xs text-white/70 uppercase tracking-wider">Protein/Portion</span>
+                    </div>
+                    <div class="w-px bg-white/20"></div>
+                    <div>
+                        <span class="block text-2xl font-bold text-white">Low</span>
+                        <span class="text-xs text-white/70 uppercase tracking-wider">Glycemic Index</span>
+                    </div>
+                    <div class="w-px bg-white/20"></div>
+                    <div>
+                        <span class="block text-2xl font-bold text-white">24m</span>
+                        <span class="text-xs text-white/70 uppercase tracking-wider">Shelf Life</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4 pt-2">
+                    <a href="#shop" class="bg-white text-brand-red text-center px-8 py-4 rounded-full font-bold uppercase tracking-wider hover:bg-gray-100 transition-all transform hover:-translate-y-1 shadow-lg">
+                        Discover Menu
+                    </a>
+                    <a href="#about" class="glass-card text-white text-center px-8 py-4 rounded-full font-bold uppercase tracking-wider hover:bg-white/20 transition-all flex items-center justify-center gap-2">
+                        Learn More <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Hero Image -->
+            <div class="relative reveal flex justify-center lg:justify-end">
+                <div class="relative w-full max-w-lg aspect-square">
+                    <div class="absolute inset-0 bg-white/10 blur-[80px] rounded-full"></div>
+                    <img src="20260420_1121_Image Generation_remix_01kpn31gj4ej4rbp9g9sqksq1w.png" alt="Mochiato Gourmet" class="relative z-10 w-full h-full object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.4)] transform hover:scale-105 transition-transform duration-700">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-brand-darkred relative z-20 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-20 reveal">
+                <h2 class="text-white/70 font-bold tracking-[0.2em] uppercase text-sm mb-4">Innovation & Tradition</h2>
+                <h3 class="text-4xl md:text-5xl font-serif mb-6 text-gradient">The excellence of Italian cuisine, reimagined.</h3>
+                <p class="text-white/80 leading-relaxed">
+                    Consumers are completely redefining the traditional food pyramid. They want something fast that delivers all nutrients without compromising on taste. MOCHIATO brings the excellence of Italian cuisine to the world in a revolutionary, portable format. Fresh, low-glycemic-index Mochi capture the rich flavors, aromas, and wholesome qualities of Italy’s culinary heritage.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="glass-card p-10 rounded-3xl reveal hover:bg-white/5 transition-colors group">
+                    <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-6 text-white group-hover:scale-110 transition-transform">
+                        <i data-lucide="chef-hat" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4 font-serif text-white">Michelin-Starred</h4>
+                    <p class="text-white/80 text-sm leading-relaxed">
+                        Crafted with premium ingredients and authentic recipes by Michelin-starred and regional Italian chefs. Clean-label, preservative-free, and unmistakably Italian.
+                    </p>
+                </div>
+                <!-- Card 2 -->
+                <div class="glass-card p-10 rounded-3xl reveal hover:bg-white/5 transition-colors group" style="transition-delay: 100ms;">
+                    <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-6 text-white group-hover:scale-110 transition-transform">
+                        <i data-lucide="zap" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4 font-serif text-white">Complete Mini-Meal</h4>
+                    <p class="text-white/80 text-sm leading-relaxed">
+                        Each snack is a complete mini-meal, containing all the macro and micronutrients required. A gourmet experience without sacrificing your health.
+                    </p>
+                </div>
+                <!-- Card 3 -->
+                <div class="glass-card p-10 rounded-3xl reveal hover:bg-white/5 transition-colors group" style="transition-delay: 200ms;">
+                    <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-6 text-white group-hover:scale-110 transition-transform">
+                        <i data-lucide="shield-check" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4 font-serif text-white">24-Month Freshness</h4>
+                    <p class="text-white/80 text-sm leading-relaxed">
+                        Available in convenient single-serve pouches, MOCHIATO lets you enjoy a balanced meal anytime, anywhere, preserving taste and authenticity for up to 24 months.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Anatomy of Mochiato -->
+    <section id="anatomy" class="py-24 bg-brand-red relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                
+                <!-- Inner Detail Image -->
+                <div class="order-2 lg:order-1 relative reveal">
+                    <div class="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent blur-[60px] rounded-full"></div>
+                    <img src="tipi_mochi.png" alt="Inside Mochiato" class="relative z-10 w-full rounded-3xl drop-shadow-[0_0_40px_rgba(0,0,0,0.3)] border border-white/10">
+                </div>
+
+                <!-- Anatomy Text -->
+                <div class="order-1 lg:order-2 space-y-12 reveal">
+                    <div>
+                        <h2 class="text-white/70 font-bold tracking-[0.2em] uppercase text-sm mb-4">Mochiato's Mochi</h2>
+                        <h3 class="text-4xl md:text-5xl font-serif text-gradient mb-6">A small feat of food innovation.</h3>
+                        <p class="text-white/90 leading-relaxed mb-6">
+                            Unlike dehydrated or preservative-laden alternatives, MOCHIATO delivers vibrant, fresh meals without artificial additives. Blending tradition and innovation to create a completely new gourmet snacking experience.
+                        </p>
+                    </div>
+
+                    <div class="space-y-8 relative before:absolute before:inset-y-0 before:left-4 before:w-px before:bg-white/30">
+                        <!-- Outer Shell -->
+                        <div class="relative pl-12">
+                            <div class="absolute left-2 top-1.5 w-4 h-4 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,0.8)]"></div>
+                            <h4 class="text-2xl font-serif mb-3 text-white">The Outer Shell</h4>
+                            <p class="text-white/80 leading-relaxed text-sm">
+                                A soft, edible layer made from glutinous rice, naturally colored with ingredients like blueberry, pistachio, and basil. It preserves the internal freshness while keeping a clean-label profile.
+                            </p>
+                        </div>
+
+                        <!-- Inner Core & Texture -->
+                        <div class="relative pl-12">
+                            <div class="absolute left-2 top-1.5 w-4 h-4 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,0.8)]"></div>
+                            <h4 class="text-2xl font-serif mb-3 text-white">Double & Triple Texture</h4>
+                            <p class="text-white/80 leading-relaxed text-sm">
+                                Wrapped around a <strong class="text-white">crisp flatbread insert</strong> that delivers an unexpected texture in every bite. Filled with selected ingredients such as Tuscan Chianina beef, 24-month aged Parmesan, low-GI rice, and fresh vegetables.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Nutrition Section -->
+    <section id="nutrition" class="py-24 bg-brand-darkred border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-white/70 font-bold tracking-[0.2em] uppercase text-sm mb-4">Premium Nutrition</h2>
+            <h3 class="text-3xl md:text-4xl font-serif text-gradient mb-16 max-w-3xl mx-auto">Only Good Fats & High-Quality Protein.</h3>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-2xl reveal hover:bg-white/5 transition-colors">
+                    <i data-lucide="droplet" class="w-10 h-10 text-white mx-auto mb-4"></i>
+                    <h4 class="font-bold text-xl mb-3 text-white">Extra Virgin Olive Oil</h4>
+                    <p class="text-sm text-white/80 leading-relaxed">A touch of EVOO (2g), rich in antioxidants and heart-friendly monounsaturated fats. Absolutely no industrial or hydrogenated fats.</p>
+                </div>
+                
+                <div class="glass-card p-8 rounded-2xl reveal hover:bg-white/5 transition-colors" style="transition-delay: 100ms;">
+                    <i data-lucide="beef" class="w-10 h-10 text-white mx-auto mb-4"></i>
+                    <h4 class="font-bold text-xl mb-3 text-white">Tuscan Chianina Beef</h4>
+                    <p class="text-sm text-white/80 leading-relaxed">One of the world’s most prized cattle breeds. Lean meat packed with bioavailable iron, vitamin B12, and a balanced omega-3 to omega-6 ratio.</p>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl reveal hover:bg-white/5 transition-colors" style="transition-delay: 200ms;">
+                    <i data-lucide="activity" class="w-10 h-10 text-white mx-auto mb-4"></i>
+                    <h4 class="font-bold text-xl mb-3 text-white">Collagen & Recovery</h4>
+                    <p class="text-sm text-white/80 leading-relaxed">Features gelatin from Chianina bone broth, a natural source of collagen that supports joints, skin, and rapid muscle recovery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop" class="py-24 bg-brand-red relative overflow-hidden border-t border-white/10">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-white/5 skew-x-12 transform origin-top-right"></div>
+
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="glass-card bg-brand-darkred/90 rounded-[2.5rem] p-8 md:p-16 border border-white/20 shadow-2xl">
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    
+                    <!-- Product Image -->
+                    <div class="reveal">
+                        <div class="relative bg-brand-deepred p-8 rounded-3xl shadow-2xl border border-white/20 group">
+                            <img src="tipi_mochi.png" alt="Mochiato Flavors Menu" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500 drop-shadow-2xl relative z-10">
+                            
+                            <!-- Elementi in sovraimpressione in alto a sinistra -->
+                            <div class="absolute top-6 left-6 z-20 flex flex-col items-start gap-4">
+                                <img src="label.png" alt="Label" style="width: 13cm; height: 13cm; max-width: 100%; object-fit: contain;" class="rounded-xl drop-shadow-[0_15px_30px_rgba(0,0,0,0.8)] border border-white/20 bg-brand-deepred/50">
+                                <div class="bg-white text-brand-red text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full shadow-lg">
+                                    Ready To Eat
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Shop Configurator -->
+                    <div class="reveal">
+                        <h2 class="text-4xl md:text-5xl font-serif font-bold mb-2 text-white">Choose Your Flavor</h2>
+                        <p class="text-white/80 font-semibold text-sm uppercase tracking-wider mb-8">Single-serve pouches • 32g Protein per portion</p>
+                        
+                        <!-- Form -->
+                        <form id="addToCartForm" class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-medium text-white/90 mb-3">Select your Gourmet Recipe:</label>
+                                <div class="relative">
+                                    <select class="w-full appearance-none bg-brand-deepred border border-white/30 text-white py-4 px-5 pr-10 rounded-xl leading-tight focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-colors cursor-pointer font-medium">
+                                        <option value="cheese_tomatoes">Italian Cheese & Puglian Sun-Dried Tomatoes</option>
+                                        <option disabled class="text-white/40">Italian Cheese, Pistachio Pesto & Crumble (SOLD OUT)</option>
+                                        <option disabled class="text-white/40">Italian Cheese, Basil Pesto & Toasted Almond (SOLD OUT)</option>
+                                        <option disabled class="text-white/40">Tuscan Chianina Beef Ragù (SOLD OUT)</option>
+                                        <option disabled class="text-white/40">Braised Chianina Beef (SOLD OUT)</option>
+                                        <option disabled class="text-white/40">Italian Beef Strips (SOLD OUT)</option>
+                                    </select>
+                                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-5 text-white/70">
+                                        <i data-lucide="chevron-down" class="w-5 h-5"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col sm:flex-row items-center gap-6 pt-4 border-t border-white/20">
+                                <div class="text-left w-full sm:w-auto">
+                                    <span class="text-sm text-white/80 block mb-1">Starting from</span>
+                                    <span class="text-4xl font-bold text-white tracking-tight">€ 8.90</span>
+                                </div>
+                                
+                                <!-- EXTERNAL LINK BUTTON -->
+                                <!-- TODO: Insert actual checkout link instead of "#" -->
+                                <a href="#" target="_blank" rel="noopener noreferrer" class="w-full sm:flex-1 bg-white hover:bg-gray-100 text-brand-red text-center py-4 px-6 rounded-xl font-bold text-lg uppercase tracking-wider transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] flex justify-center items-center gap-3 group">
+                                    <i data-lucide="shopping-cart" class="w-5 h-5 group-hover:-rotate-12 transition-transform"></i>
+                                    Order Now
+                                </a>
+                            </div>
+                            
+                            <div class="flex items-center justify-center sm:justify-start gap-4 mt-6 text-xs text-white/80">
+                                <span class="flex items-center gap-1.5"><i data-lucide="package" class="w-4 h-4 text-white"></i> 24-Month Shelf Life</span>
+                                <span class="flex items-center gap-1.5"><i data-lucide="leaf" class="w-4 h-4 text-white"></i> Clean-label</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-deepred border-t border-white/20 pt-16 pb-8 text-white/80">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12 text-sm mb-12">
+            <div class="md:col-span-2">
+                <img src="MOCHIATO LOGO PNG (FONT AFACAD).png" alt="Mochiato Logo" class="w-40 mb-6 opacity-100 drop-shadow-md">
+                <p class="max-w-sm leading-relaxed text-white/90">
+                    MOCHIATO by Relife Nutrition. The revolutionary food experience that brings the heart of true Italian cuisine to the palm of your hand. Authenticity, science, and tradition in every bite.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold uppercase tracking-widest mb-6">Explore</h4>
+                <ul class="space-y-3">
+                    <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
+                    <li><a href="#anatomy" class="hover:text-white transition-colors">The Product</a></li>
+                    <li><a href="#nutrition" class="hover:text-white transition-colors">Nutrition</a></li>
+                    <li><a href="#shop" class="hover:text-white transition-colors">Shop</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold uppercase tracking-widest mb-6">Legal & Social</h4>
+                <ul class="space-y-3 mb-8">
+                    <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+                </ul>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white hover:text-brand-red text-white transition-all">
+                        <i data-lucide="instagram" class="w-4 h-4"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white hover:text-brand-red text-white transition-all">
+                        <i data-lucide="linkedin" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 text-center text-xs pt-8 border-t border-white/20 text-white/60">
+            &copy; 2026 Mochiato - All rights reserved. Relife Nutrition. Designed in Italy.
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        lucide.createIcons();
+
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-brand-deepred/95');
+                navbar.classList.remove('glass');
+                navbar.style.borderBottom = '1px solid rgba(255, 255, 255, 0.1)';
+            } else {
+                navbar.classList.add('glass');
+                navbar.classList.remove('bg-brand-deepred/95');
+                navbar.style.borderBottom = '1px solid rgba(255, 255, 255, 0.1)';
+            }
+        });
+
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100; 
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        setTimeout(reveal, 100); 
+    </script>
+</body>
+</html>
