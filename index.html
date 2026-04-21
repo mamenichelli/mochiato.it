@@ -279,20 +279,25 @@
 
         <div class="max-w-6xl mx-auto px-6 relative z-10">
             <div class="glass-card bg-brand-darkred/90 rounded-[2.5rem] p-8 md:p-16 border border-white/20 shadow-2xl">
-                <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="grid md:grid-cols-2 gap-16 items-start">
                     
-                    <!-- Product Image -->
+                    <!-- Product Image & Label -->
                     <div class="reveal">
-                        <div class="relative bg-brand-deepred p-4 sm:p-8 rounded-3xl shadow-2xl border border-white/20 group overflow-hidden">
-                            <img src="tipi_mochi.png" alt="Mochiato Flavors Menu" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500 drop-shadow-2xl relative z-10">
+                        <div class="flex flex-col items-center sm:items-start gap-8">
                             
-                            <!-- Elementi in sovraimpressione in alto a sinistra -->
-                            <div class="absolute top-4 left-4 sm:top-6 sm:left-6 z-20 flex flex-col items-start gap-2 sm:gap-4">
-                                <img src="label.png" alt="Label" class="w-24 h-24 sm:w-32 sm:h-32 lg:w-[13cm] lg:h-[13cm] max-w-[45vw] md:max-w-[80%] object-contain rounded-xl drop-shadow-[0_15px_30px_rgba(0,0,0,0.8)] border border-white/20 bg-brand-deepred/50">
-                                <div class="bg-white text-brand-red text-[10px] sm:text-xs font-bold uppercase tracking-widest px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-lg">
+                            <!-- Etichetta e Badge estratti per NON sovrapporsi -->
+                            <div class="flex flex-col items-center sm:items-start gap-4">
+                                <img src="label.png" alt="Label" class="w-40 h-40 sm:w-56 sm:h-56 lg:w-[13cm] lg:h-[13cm] object-contain rounded-2xl drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)] border border-white/20 bg-brand-deepred/40 p-2">
+                                <div class="bg-white text-brand-red text-xs sm:text-sm font-bold uppercase tracking-widest px-5 py-2.5 rounded-full shadow-lg">
                                     Ready To Eat
                                 </div>
                             </div>
+                            
+                            <!-- Contenitore Immagine Mochi indipendente -->
+                            <div class="relative bg-brand-deepred p-4 sm:p-8 rounded-3xl shadow-2xl border border-white/20 group overflow-hidden w-full">
+                                <img src="tipi_mochi.png" alt="Mochiato Flavors Menu" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500 drop-shadow-2xl relative z-10">
+                            </div>
+                            
                         </div>
                     </div>
 
