@@ -117,7 +117,7 @@
                     <span class="text-white/90 italic">Anytime, Anywhere.</span>
                 </h1>
                 <p class="text-lg md:text-xl text-white/80 font-light leading-relaxed max-w-xl">
-                    A revolutionary gourmet snacking experience. Complete mini-meals featuring Michelin-starred recipes, 32g of protein, and authentic Italian ingredients in a portable format.
+                    A revolutionary gourmet snacking experience. Complete mini-meals featuring Michelin-starred recipes, 32g of protein, good fats for fast energy, and authentic Italian ingredients in a portable format.
                 </p>
                 
                 <!-- Quick Stats -->
@@ -256,13 +256,7 @@
             <h2 class="text-white/70 font-bold tracking-[0.2em] uppercase text-sm mb-4">Premium Nutrition</h2>
             <h3 class="text-3xl md:text-4xl font-serif text-gradient mb-16 max-w-3xl mx-auto">Only Good Fats & High-Quality Protein.</h3>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="glass-card p-8 rounded-2xl reveal hover:bg-white/5 transition-colors">
-                    <i data-lucide="droplet" class="w-10 h-10 text-white mx-auto mb-4"></i>
-                    <h4 class="font-bold text-xl mb-3 text-white">Extra Virgin Olive Oil</h4>
-                    <p class="text-sm text-white/80 leading-relaxed">A touch of EVOO (2g), rich in antioxidants and heart-friendly monounsaturated fats. Absolutely no industrial or hydrogenated fats.</p>
-                </div>
-                
+            
                 <div class="glass-card p-8 rounded-2xl reveal hover:bg-white/5 transition-colors" style="transition-delay: 100ms;">
                     <i data-lucide="award" class="w-10 h-10 text-white mx-auto mb-4"></i>
                     <h4 class="font-bold text-xl mb-3 text-white">24-Month Parmigiano</h4>
@@ -274,6 +268,14 @@
                     <h4 class="font-bold text-xl mb-3 text-white">Tuscan Chianina Beef</h4>
                     <p class="text-sm text-white/80 leading-relaxed">One of the world’s most prized cattle breeds. Lean meat packed with bioavailable iron, vitamin B12, and a balanced omega-3 to omega-6 ratio.</p>
                 </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="glass-card p-8 rounded-2xl reveal hover:bg-white/5 transition-colors">
+                    <i data-lucide="droplet" class="w-10 h-10 text-white mx-auto mb-4"></i>
+                    <h4 class="font-bold text-xl mb-3 text-white">EVOO & MCT (C8) Energy</h4>
+                    <p class="text-sm text-white/80 leading-relaxed">A powerful blend of antioxidant-rich EVOO (2g) and pure MCT C8 oil (14g) providing immediate, fast-acting mental and physical energy. Zero industrial fats.</p>
+                </div>
+                
 
                 <div class="glass-card p-8 rounded-2xl reveal hover:bg-white/5 transition-colors" style="transition-delay: 300ms;">
                     <i data-lucide="activity" class="w-10 h-10 text-white mx-auto mb-4"></i>
@@ -303,15 +305,38 @@
                                     Ready To Eat
                                 </div>
                             </div>
-                        
+                            
+                          
                         </div>
                     </div>
 
                     <!-- Shop Configurator -->
                     <div class="reveal mt-8 md:mt-0">
                         <h2 class="text-4xl md:text-5xl font-serif font-bold mb-2 text-white">Choose Your Flavor</h2>
-                        <p class="text-white/80 font-semibold text-sm uppercase tracking-wider mb-8">Single-serve pouches • 32g Protein per portion</p>
+                        <p class="text-white/80 font-semibold text-sm uppercase tracking-wider mb-6">Single-serve pouches • 32g Protein per portion</p>
                         
+                        <!-- Nuova Sezione Claims -->
+                        <div class="flex flex-wrap gap-2.5 mb-8">
+                            <span class="flex items-center gap-1.5 bg-white/10 text-white px-3 py-1.5 rounded-full text-xs font-semibold border border-white/20 shadow-sm">
+                                <i data-lucide="zap" class="w-3.5 h-3.5 text-white"></i> High Protein (32%)
+                            </span>
+                            <span class="flex items-center gap-1.5 bg-white/10 text-white px-3 py-1.5 rounded-full text-xs font-semibold border border-white/20 shadow-sm">
+                                <i data-lucide="flame" class="w-3.5 h-3.5 text-white"></i> MCT C8 Fast Energy
+                            </span>
+                            <span class="flex items-center gap-1.5 bg-white/10 text-white px-3 py-1.5 rounded-full text-xs font-semibold border border-white/20 shadow-sm">
+                                <i data-lucide="scale" class="w-3.5 h-3.5 text-white"></i> Reduced Sodium
+                            </span>
+                            <span class="flex items-center gap-1.5 bg-white/10 text-white px-3 py-1.5 rounded-full text-xs font-semibold border border-white/20 shadow-sm">
+                                <i data-lucide="wheat" class="w-3.5 h-3.5 text-white"></i> Source of Fiber
+                            </span>
+                            <span class="flex items-center gap-1.5 bg-white/10 text-white px-3 py-1.5 rounded-full text-xs font-semibold border border-white/20 shadow-sm">
+                                <i data-lucide="minus-circle" class="w-3.5 h-3.5 text-white"></i> Low Sugar
+                            </span>
+                            <span class="flex items-center gap-1.5 bg-white/10 text-white px-3 py-1.5 rounded-full text-xs font-semibold border border-white/20 shadow-sm">
+                                <i data-lucide="trending-down" class="w-3.5 h-3.5 text-white"></i> Low GI friendly
+                            </span>
+                        </div>
+
                         <!-- Form -->
                         <form id="addToCartForm" class="space-y-6">
                             <div>
@@ -350,6 +375,39 @@
                                 <span class="flex items-center gap-1.5"><i data-lucide="leaf" class="w-4 h-4 text-white"></i> Clean-label</span>
                             </div>
                         </form>
+
+                        <!-- Nuova Sezione Tabella Nutrizionale -->
+                        <div class="mt-10 bg-brand-darkred/60 rounded-2xl p-6 border border-white/20 shadow-xl">
+                            <h4 class="text-white font-serif font-bold text-xl mb-5 flex items-center gap-2">
+                                <i data-lucide="bar-chart-2" class="w-5 h-5 text-white"></i> Nutritional Facts
+                            </h4>
+                            <div class="space-y-3 text-sm text-white/90">
+                                <div class="flex justify-between border-b border-white/10 pb-2">
+                                    <span class="font-medium">Calories</span>
+                                    <span class="font-bold">480 kcal</span>
+                                </div>
+                                <div class="flex justify-between border-b border-white/10 pb-2">
+                                    <span class="font-medium">Protein</span>
+                                    <span class="font-bold">32 g</span>
+                                </div>
+                                <div class="flex flex-col border-b border-white/10 pb-2">
+                                    <div class="flex justify-between">
+                                        <span class="font-medium">Fats (functional fats)</span>
+                                        <span class="font-bold">30 g</span>
+                                    </div>
+                                    <span class="text-[11px] text-white/60 mt-1 leading-snug">including 14 g from MCT (C8) – fast energy fats</span>
+                                </div>
+                                <div class="flex justify-between border-b border-white/10 pb-2">
+                                    <span class="font-medium">Carbohydrates</span>
+                                    <span class="font-bold">20 g</span>
+                                </div>
+                                <div class="flex justify-between pb-1">
+                                    <span class="font-medium">Fiber</span>
+                                    <span class="font-bold">7 g</span>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
